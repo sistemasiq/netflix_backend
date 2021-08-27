@@ -24,5 +24,10 @@ public class PlanREST {
 		List<Plan> resultado = planJDBC.consultarPlanes();
 		return new ResponseEntity<List<Plan>>(resultado, HttpStatus.OK);
 	}
+	
+	@GetMapping("/cicd")
+	public ResponseEntity<?> holaCICD(){
+		return new ResponseEntity<String>("Hola CI/CD", HttpStatus.OK);
+	}
 
 }
